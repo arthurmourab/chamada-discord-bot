@@ -10,10 +10,6 @@ This project is a Discord bot designed to manage voice channels and enforce cert
     - If the command is executed successfully, it prompts users in the voice channel to react within 20 seconds.
     - Users who do not react are moved to the server's AFK channel.
 
-2. **Voice Channel Monitoring**:
-    - The bot monitors voice channel state updates.
-    - If a specific user joins a voice channel, it will disconnect another specified user from the channel.
-
 ## Prerequisites
 
 - Node.js

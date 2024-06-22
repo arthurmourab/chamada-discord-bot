@@ -61,27 +61,11 @@ client.on('messageCreate', async message => {
                             member.voice.setChannel(targetChannel).catch(console.error);
                         }
                     });
-                   message.channel.send('Membros que não reagiram foram movidos.');
+                   message.channel.send('Muxos foram movidos! Mais atenção da próxima vex.');
                 });
         } catch (error) {
             console.error(error);
             message.channel.send('Houve um erro ao processar as reações.');
-        }
-    }
-});
-
-client.on('voiceStateUpdate', (oldState, newState) => {
-    const newUserChannel = newState.channel;
-    const oldUserChannel = oldState.channel;
-    const userId = newState.id;
-
-    // Checar se o usuário monitorado entrou em um canal de voz
-    if (userId === '253611449031720960' && newUserChannel && newUserChannel.id !== oldUserChannel?.id) {
-        const targetUser = newUserChannel.members.get('231912544451690496');
-
-        if (targetUser) {
-            targetUser.voice.disconnect('Usuário monitorado entrou no canal.');
-            console.log(`Desconectando ${targetUser.user.tag} porque ${newState.member.user.tag} entrou no canal.`);
         }
     }
 });
