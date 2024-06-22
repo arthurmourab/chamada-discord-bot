@@ -14,7 +14,7 @@ const client = new Client({
         ]
 });
 
-const COOLDOWN_TIME = 15 * 60 * 1000;
+const COOLDOWN_TIME = 20 * 60 * 1000;
 let lastExecuted = 0;
 
 client.on('messageCreate', async message => {
